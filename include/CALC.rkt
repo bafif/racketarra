@@ -23,8 +23,7 @@
          (char->note (+ (string-ref ch 0) 1))]
         [(char=? (string-ref ch 1) #\m)
          (char->note (string-ref ch 0))]
-        ))
-  )
+        )))
 
 (define (chord-calc chord)
   (if (char? chord)
