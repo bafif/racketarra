@@ -1,7 +1,7 @@
 #lang racket
 
 (require "BASE.rkt")
-(provide fret-gen char->note chord-calc fretin-chord fret-notas)
+(provide fret-gen char->note chord-calc fretin-chord fret-notes)
 
 (define (fret-gen n color)
   (fret n n (+ n 5) (+ n 10) (+ n 15) (+ n 19) (+ n 24) color))
@@ -60,7 +60,7 @@
                   (modulo (+ (char->note (substring chord 0 1)) 7) 12)
                   )])])))
 
-(define (fret-notas fret)
+(define (fret-notes fret)
   (list   (modulo (fret-NOTA1 fret) 12) (modulo (fret-NOTA2 fret) 12)
           (modulo (fret-NOTA3 fret) 12) (modulo (fret-NOTA4 fret) 12)
           (modulo (fret-NOTA5 fret) 12) (modulo (fret-NOTA6 fret) 12) ))

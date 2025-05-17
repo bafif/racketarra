@@ -8,11 +8,12 @@
          fret-NOTA4 fret-NOTA5 fret-NOTA6 fret-COLOR)
 
 
-; ENTORNO GRÁFICO
-;;;;;;;;;;;;;;;;;
-
-(define GLOBAL_SCALE 3/2) ; Escalado gráfico global
-
-; ESTRUCTURAS COMUNES
+; GRAPHIC ENVIRONMENT
 ;;;;;;;;;;;;;;;;;;;;;
-(struct fret [NUM NOTA1 NOTA2 NOTA3 NOTA4 NOTA5 NOTA6 COLOR])
+
+(define GLOBAL_SCALE 3/2)
+
+; COMMON STRUCTURES
+;;;;;;;;;;;;;;;;;;;;;
+
+(struct fret [NUM NOTA1 NOTA2 NOTA3 NOTA4 NOTA5 NOTA6 COLOR]) ; Obsolete
