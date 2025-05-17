@@ -1,7 +1,7 @@
 #lang racket
 
 (require 2htdp/image)
-(require "../include/CHORDS.rkt")
+(require "include/CHORDS.rkt")
 
 (require 2htdp/universe)
 
