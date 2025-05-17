@@ -31,4 +31,4 @@
     [(empty? lst) iron-img]
     [else (underlay/xy (fret-chord-layer (fretin-chord (fret-notes (first lst))
                                                        (chord-calc chord)))
-                       FRET_WIDTH 0 (chords-img chord (rest lst)))]))
+                       FRET_SPACING 0 (chords-img chord (rest lst)))]))
