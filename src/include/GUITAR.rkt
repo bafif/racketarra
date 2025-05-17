@@ -30,7 +30,7 @@
                                                   COLOR)
                                        iron-img))
 
-(define frets-list (build-list 25 (λ (i) (fret-gen i NECK_COLOR))))
+(define frets-list (build-list 25 (lambda (i) (fret-gen i NECK_COLOR))))
 
 (define STRING_WIDTH NECK_WIDTH)                ; (Actually string length)
 (define STRING_HEIGHT (* GLOBAL_SCALE 2))       ; (Actually string height)
