@@ -29,7 +29,6 @@
 (define (chords-img chord lst)
   (cond
     [(empty? lst) iron-img]
-    [else (underlay/xy (fret-chord-layer
-                        (fretin-chord (fret-notas (first lst))
-                                      (chord-calc chord)))
-                       FRET_WIDTH 0 (chords-img chord (rest lst)))]))
+    [else (underlay/xy (fret-chord-layer (fretin-chord (fret-notes (first lst))
+                                                       (chord-calc chord)))
+                       FRET_SPACING 0 (chords-img chord (rest lst)))]))
