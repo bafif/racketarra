@@ -25,7 +25,6 @@
                                                          (underlay/xy (note-img (note-color (fifth lst))) 0 STRING_LITSEP
                                                                       (note-img (note-color (sixth lst)))))))))
 
-
 (define (chords-img chord lst)
   (cond
     [(empty? lst) iron-img]
