@@ -7,15 +7,15 @@
   (fret n n (+ n 5) (+ n 10) (+ n 15) (+ n 19) (+ n 24) color))
 
 (define (char->note ch)
-  (if (char? ch)
+  (if (= (string-length ch) 1)
       (cond
-        [(char=? ch #\E) 0]
-        [(char=? ch #\F) 1]
-        [(char=? ch #\G) 3]
-        [(char=? ch #\A) 5]
-        [(char=? ch #\B) 7]
-        [(char=? ch #\C) 8]
-        [(char=? ch #\D) 10])
+        [(char=? (string-ref ch 0) #\E) 0]
+        [(char=? (string-ref ch 0) #\F) 1]
+        [(char=? (string-ref ch 0) #\G) 3]
+        [(char=? (string-ref ch 0) #\A) 5]
+        [(char=? (string-ref ch 0) #\B) 7]
+        [(char=? (string-ref ch 0) #\C) 8]
+        [(char=? (string-ref ch 0) #\D) 10])
       (cond
         [(char=? (string-ref ch 1) #\b)
          (char->note (- (string-ref ch 0) 1))]
@@ -26,7 +26,7 @@
         )))
 
 (define (chord-calc chord)
-  (if (char? chord)
+  (if (= (string-length chord) 1)
       (list (char->note chord)
             (modulo (+ (char->note chord) 4) 12)
             (modulo (+ (char->note chord) 7) 12))
