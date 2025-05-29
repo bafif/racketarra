@@ -1,10 +1,21 @@
 #lang racket
 
 (require "BASE.rkt")
+(require "GUITAR.rkt")
+
 (provide fret-gen string->note chord-calc fretin-chord fret-notes)
 
-(define (fret-gen n color)
-  (fret n n (+ n 5) (+ n 10) (+ n 15) (+ n 19) (+ n 24) color))
+; We represent frets as a struct { NUM, NOTE, COLOR }
+; fret-gen : NUM, GSTRING, TUNING, , COLOR -> { NUM, NOTE, COLOR }
+; it gets a number and a color, and returns a fret
+; struct calculating its note.
+; input: 
+(define (fret-gen
+         NUM
+         GSTRING
+         [TUNING (list (list 0 5 10 3 7 0) (list "EDO" 12))] 
+         [COLOR NECK_COLOR])
+  (fret NUM COLOR))
 
 (define (string->note ch)
   (cond
