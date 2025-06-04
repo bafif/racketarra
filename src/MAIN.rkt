@@ -7,7 +7,7 @@
 
 (define (window-draw x)
   (let ([fretboard (underlay/xy (guitar-img frets-list) 0 0
-                                (chords-img "Bm" frets-list))])
+                                (chords-img frets-list))])
     (let ([width (image-width fretboard)]
           [height (image-height fretboard)])
       (place-image fretboard (/ width 2) (/ height 2)
