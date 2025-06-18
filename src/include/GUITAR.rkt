@@ -3,6 +3,7 @@
 (require 2htdp/image)
 (require "BASE.rkt")
 (require "CALC.rkt")
+(require "COLORS.rkt")
 
 (provide fret-img frets-img frets-list NECK_COLOR guitar-img STRING_LITSEP FRET_SPACING iron-img)
 
@@ -11,7 +12,6 @@
 
 (define NECK_LENGTH  (* GLOBAL_SCALE 500))
 (define NECK_WIDTH (* GLOBAL_SCALE 60))
-(define NECK_COLOR  (make-color 40 40 0))
 
 (define (neck-img [length = NECK_LENGT])
   (rectangle length NECK_WIDTH "solid" NECK_COLOR))

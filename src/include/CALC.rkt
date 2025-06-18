@@ -1,7 +1,7 @@
 #lang racket
 
 (require "BASE.rkt")
-(require "GUITAR.rkt")
+(require "COLORS.rkt")
 
 (provide fret-gen string->note chord-calc fretin-chord fret-notes)
 

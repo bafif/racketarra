@@ -4,6 +4,7 @@
 (require 2htdp/universe)
 
 (require "include/CHORDS.rkt")
+(require "include/GUITAR.rkt")
 
 ; Represento con la escena main-scn una escena principal
 ;sobre la cual va a dibujarse el resto del programa.
