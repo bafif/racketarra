@@ -13,13 +13,14 @@
 (define NECK_WIDTH (* GLOBAL_SCALE 60))
 (define NECK_COLOR  (make-color 40 40 0))
 
-(define neck-img (rectangle NECK_LENGTH NECK_WIDTH "solid" NECK_COLOR))
+(define (neck-img [length = NECK_LENGT])
+  (rectangle length NECK_WIDTH "solid" NECK_COLOR))
 
 (define FRET_WIDTH  (* GLOBAL_SCALE 2))
 (define FRET_LENGTH (* NECK_WIDTH 31/30))
 (define FRET_COLOR  (make-color 150 150 50))
 
-(define iron-img (rectangle FRET_WIDTH FRET_LENGTH "solid" FRET_COLOR))
+(define (iron-img [length = FRET_LENGTH]) (rectangle FRET_WIDTH FRET_LENGTH "solid" FRET_COLOR))
 
 (define FRET_SPACING  (* GLOBAL_SCALE 20))
 
